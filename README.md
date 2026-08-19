@@ -281,15 +281,11 @@ These limitations were considered before drawing conclusions from the data.
 ```text
 Olist-Ecommerce-Analysis/
 │
-├── data/
-│   ├── raw/
-│   └── cleaned/
-│
 ├── python/
-│   └── data_cleaning.ipynb
+│   └── ecom_cleaning.ipynb
 │
 ├── sql/
-│   └── business_analysis.sql
+│   └── ecomdataset.sql
 │
 ├── powerbi/
 │   └── olist_dashboard.pbix
