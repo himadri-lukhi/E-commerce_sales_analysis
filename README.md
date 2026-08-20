@@ -276,24 +276,6 @@ These limitations were considered before drawing conclusions from the data.
 
 ---
 
-# 📁 Project Structure
-
-```text
-Olist-Ecommerce-Analysis/
-│
-├── python/
-│   └── ecom_cleaning.ipynb
-│
-├── sql/
-│   └── ecomdataset.sql
-│
-├── powerbi/
-│   └── olist_dashboard.pbix
-│
-└── README.md
-├── screenshots/
-│   └── dashboard.png
-```
 
 ---
 
