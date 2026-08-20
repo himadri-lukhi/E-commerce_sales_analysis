@@ -109,7 +109,7 @@ SELECT * FROM category_translation;
 
 
 -- How much revenue did the business generate overall? TOTAL REVENUE
-select sum(price + freight_value) as total_revenue
+select sum(price) as total_revenue
 from order_items;
 
 -- How many actual orders did the business receive?
@@ -120,7 +120,7 @@ select distinct count(customer_unique_id) as total_customers
 from customer;
 
 -- On average, how much revenue does one order generate?
-select sum(oi.price + oi.freight_value)/  count(distinct(o.order_id)) 
+select sum(oi.price)/  count(distinct(o.order_id)) 
 from order_items oi
 join orders o 
 on o.order_id = oi.order_id
@@ -128,7 +128,7 @@ on o.order_id = oi.order_id
 -- What is the overall monthly revenue pattern?
 select extract('month' from o.order_purchase_timestamp) as month_no,
 		to_char(o.order_purchase_timestamp,'Month') as month,
-		sum(oi.price + oi.freight_value) as total_revenue
+		sum(oi.price) as total_revenue
 		
 from orders o
 join order_items oi
@@ -153,7 +153,7 @@ order by month_no;
 -- AOV
 select extract('month' from o.order_purchase_timestamp) as month_no,
 		to_char(o.order_purchase_timestamp,'Month') as month,
-		sum(oi.price + oi.freight_value) / count(distinct(o.order_id)) as aov
+		sum(oi.price) / count(distinct(o.order_id)) as aov
 		
 from orders o
 join order_items oi
