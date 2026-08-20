@@ -5,6 +5,7 @@
 This project analyzes **Olist, a Brazilian e-commerce marketplace**, to understand sales performance, customer purchasing behavior, category performance, and operational issues.
 
 The analysis follows a complete analytics workflow:
+The dataset contains partial data for 2016. Therefore, monthly trend analysis for Total Revenue, Total Orders, and AOV uses the complete years 2017–2018 for a fair year-over-year comparison. Category-level analysis and Items per Order use all available data from 2016–2018.
 
 **Data Cleaning → Data Validation → SQL Analysis → Business Questions → Power BI Dashboard → Insights & Recommendations**
 
